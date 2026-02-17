@@ -1,22 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Do Anything</title>
-  </head>
-  <body>
-    <header class="header">
-      <h1>Welcome</h1>
-    </header>
-    <!-- Section to handle task input -->
-    <form action="">
-      <label for="title">Title: </label>
-      <input type="text" name="" id="" />
-    </form>
-    <label for="message">Message:</label>
-    <textarea id="Description" name="message" >
-      Do x...
-    </textarea>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+
+      <!-- Current Project Title -->
+      <header class="main-header">
+        <h2 id="current-project-title">Default</h2>
+      </header>
+
+
+      <!-- ================= ADD TASK FORM ================= -->
+      <section class="add-todo-section">
+        <h3>Add New Task</h3>
+
+        <form id="add-todo-form">
+
+          <!-- Title -->
+          <div class="form-group">
+            <label for="todo-title">Title</label>
+            <input
+              type="text"
+              id="todo-title"
+              name="title"
+              placeholder="Enter task title"
+              required
+            />
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="todo-description">Description</label>
+            <textarea
+              id="todo-description"
+              name="description"
+              placeholder="Enter task description"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <!-- Priority -->
+          <div class="form-group">
+            <label for="todo-priority">Priority</label>
+            <select id="todo-priority" name="priority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="add-task-btn">
+            Add Task
+          </button>
+
+        </form>
+      </section>
+
+      <!-- ================= TODO LIST ================= -->
+      <section id="todo-list">
+        <!-- JavaScript will render todos here -->
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <script type="module" src="index.js"></script>
+</body>
 </html>
