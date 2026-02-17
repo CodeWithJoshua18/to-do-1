@@ -16,7 +16,7 @@ const taskList = document.getElementById("todo-list");
 
 // Handle form submit
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  e.preventDefault(); //prevent the page from refreshing
 
   const title = document.getElementById("todo-title").value;
   const description = document.getElementById("todo-description").value;
@@ -27,7 +27,7 @@ form.addEventListener("submit", function (e) {
 
 //   add new task to the tasks array
   tasks.push(newTask);
-  
+
   displayTasks();
   form.reset(); // clear form after submit
 });
