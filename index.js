@@ -15,7 +15,7 @@ const form = document.getElementById("add-todo-form");
 const taskList = document.getElementById("todo-list");
 
 // Handle form submit
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", function (e) {  
   e.preventDefault(); //prevent the page from refreshing
 
   const title = document.getElementById("todo-title").value;
